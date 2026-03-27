@@ -1,0 +1,137 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-body {
+    background-color: #63A44C; /* Verde oliva idêntico ao fundo */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.login-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    align-items: center;
+}
+
+/* Lado Esquerdo - Logo */
+.logo-section {
+    flex: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-wrapper {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-logo {
+    width: 100%;
+    max-width: 550px; /* Logo maior como na foto */
+    height: auto;
+    filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.1));
+}
+
+/* Lado Direito - Formulário */
+.form-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 40px;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 420px;
+    color: white;
+}
+
+.welcome {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 35px;
+    letter-spacing: -1px;
+}
+
+/* Inputs */
+.input-group {
+    margin-bottom: 22px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: 12px;
+    border: none;
+    background-color: #fceef5; /* Cor rosada idêntica à foto */
+    font-size: 15px;
+    color: #333;
+    outline: none;
+}
+
+.input-group input::placeholder {
+    color: #b5a1a8;
+}
+
+/* Botão Entrar */
+.btn-entrar {
+    width: 100%;
+    padding: 16px;
+    background-color: #a6ce39; /* Verde limão do botão */
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    margin-top: 10px;
+}
+
+.btn-entrar:hover {
+    background-color: #95ba32;
+    transform: translateY(-2px);
+}
+
+/* Link de Cadastro */
+.signup-text {
+    margin-top: 25px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.signup-text a {
+    color: #a6ce39;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
