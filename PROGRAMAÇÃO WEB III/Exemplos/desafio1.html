@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Desafio</title>
+</head>
+<body>
+
+  <h1>Desafio</h1>
+
+  <button onclick="calcular()">
+    Iniciar
+  </button>
+  <script>
+    function calcular(){
+
+      let numero1 = prompt("Digite o primeiro número:");
+      let numero2 = prompt("Digite o segundo número:");
+
+      numero1 = Number(numero1);
+      numero2 = Number(numero2);
+
+      let soma = numero1 + numero2;
+      let subtracao = numero1 - numero2;
+      let multiplicacao = numero1 * numero2;
+
+      document.write("Soma: " + soma + "<br>");
+      document.write("Subtração: " + subtracao + "<br>");
+      document.write("Multiplicação: " + multiplicacao);
+    }
+  </script>
+</body>
+</html>
