@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Exercício Prático</title>
+</head>
+
+<body>
+
+<h1>Exercício Prático</h1>
+
+<p>
+Desenvolva um programa JavaScript que aplique os quatro tipos de operadores.
+</p>
+
+<hr>
+
+<h3>Digite dois números</h3>
+
+<label>Valor A:</label>
+<input type="number" id="a">
+
+<br><br>
+
+<label>Valor B:</label>
+<input type="number" id="b">
+
+<br><br>
+
+<button onclick="calcular()">Calcular</button>
+
+<hr>
+
+<div id="resultado"></div>
+
+<script>
+
+function calcular(){
+
+    // Pegando valores digitados
+    let a = Number(document.getElementById("a").value);
+    let b = Number(document.getElementById("b").value);
+
+    // Operações
+    let soma = a + b;
+    let subtracao = a - b;
+    let multiplicacao = a * b;
+    let divisao = a / b;
+
+    // Comparação
+    let comparacao;
+
+    if(a > b){
+        comparacao = "A é maior que B";
+    }
+    else if(a < b){
+        comparacao = "B é maior que A";
+    }
+    else{
+        comparacao = "A e B são iguais";
+    }
+
+    // Incremento e decremento
+    a++;
+    b--;
+
+    // Desafio extra
+    let nota = Number(prompt("Digite a nota do aluno:"));
+    let frequencia = Number(prompt("Digite a frequência do aluno:"));
+
+    let aprovado;
+
+    if(nota >= 7 && frequencia >= 75){
+        aprovado = "O aluno foi aprovado!";
+    }
+    else{
+        aprovado = "O aluno foi reprovado!";
+    }
+
+    // Exibir resultados
+    document.getElementById("resultado").innerHTML = `
+        <h2>Resultados</h2>
+
+        <p>Soma: ${soma}</p>
+        <p>Subtração: ${subtracao}</p>
+        <p>Multiplicação: ${multiplicacao}</p>
+        <p>Divisão: ${divisao}</p>
+
+        <p>${comparacao}</p>
+
+        <p>Novo valor de A após ++ : ${a}</p>
+        <p>Novo valor de B após -- : ${b}</p>
+
+        <p>${aprovado}</p>
+    `;
+}
+
+</script>
+
+</body>
+</html>
