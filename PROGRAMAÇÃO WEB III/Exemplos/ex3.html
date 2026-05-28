@@ -2,42 +2,73 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Operações</title>
+    <title>if else - else if - switch</title>
 </head>
 <body>
 
 <script>
 
-let a = Number(prompt("Digite o primeiro valor:"));
-let b = Number(prompt("Digite o segundo valor:"));
+// Parte 1 — if/else
 
-document.write("Primeiro valor: " + a + "<br>");
-document.write("Segundo valor: " + b + "<br><br>");
+let idade = Number(prompt("Digite sua idade:"));
 
-document.write("Soma: " + (a + b) + "<br>");
-document.write("Subtração: " + (a - b) + "<br>");
-document.write("Multiplicação: " + (a * b) + "<br>");
-document.write("Divisão: " + (a / b) + "<br><br>");
-
-if(a > b){
-    document.write(a + " é maior que " + b + "<br>");
-}else if(b > a){
-    document.write(b + " é maior que " + a + "<br>");
+if(idade >= 18){
+    document.write("Pode dirigir<br><br>");
 }else{
-    document.write("Os valores são iguais<br>");
+    document.write("Não pode dirigir<br><br>");
 }
 
-if(a == b){
-    document.write("Os dois valores são iguais<br><br>");
+
+// Parte 2 — else if
+
+let nota = Number(prompt("Digite sua nota:"));
+
+if(nota >= 7){
+    document.write("Aprovado<br><br>");
+}else if(nota >= 5){
+    document.write("Recuperação<br><br>");
 }else{
-    document.write("Os valores são diferentes<br><br>");
+    document.write("Reprovado<br><br>");
 }
 
-a++;
-b--;
 
-document.write("Novo valor de a após incremento: " + a + "<br>");
-document.write("Novo valor de b após decremento: " + b + "<br>");
+// Parte 3 — switch
+
+let dia = Number(prompt("Digite um número de 1 a 7:"));
+
+switch(dia){
+
+    case 1:
+        document.write("Domingo");
+        break;
+
+    case 2:
+        document.write("Segunda");
+        break;
+
+    case 3:
+        document.write("Terça");
+        break;
+
+    case 4:
+        document.write("Quarta");
+        break;
+
+    case 5:
+        document.write("Quinta");
+        break;
+
+    case 6:
+        document.write("Sexta");
+        break;
+
+    case 7:
+        document.write("Sábado");
+        break;
+
+    default:
+        document.write("Dia inválido");
+}
 
 </script>
 
