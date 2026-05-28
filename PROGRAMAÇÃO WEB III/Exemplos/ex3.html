@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Operações</title>
+</head>
+<body>
+
+<script>
+
+let a = Number(prompt("Digite o primeiro valor:"));
+let b = Number(prompt("Digite o segundo valor:"));
+
+document.write("Primeiro valor: " + a + "<br>");
+document.write("Segundo valor: " + b + "<br><br>");
+
+document.write("Soma: " + (a + b) + "<br>");
+document.write("Subtração: " + (a - b) + "<br>");
+document.write("Multiplicação: " + (a * b) + "<br>");
+document.write("Divisão: " + (a / b) + "<br><br>");
+
+if(a > b){
+    document.write(a + " é maior que " + b + "<br>");
+}else if(b > a){
+    document.write(b + " é maior que " + a + "<br>");
+}else{
+    document.write("Os valores são iguais<br>");
+}
+
+if(a == b){
+    document.write("Os dois valores são iguais<br><br>");
+}else{
+    document.write("Os valores são diferentes<br><br>");
+}
+
+a++;
+b--;
+
+document.write("Novo valor de a após incremento: " + a + "<br>");
+document.write("Novo valor de b após decremento: " + b + "<br>");
+
+</script>
+
+</body>
+</html>
