@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções JavaScript</title>
+</head>
+<body>
+
+    <h1>Atividade 6 / JavaScript</h1>
+
+    <script>
+
+        // 1. Função de boas-vindas
+        function apresentar() {
+            console.log("Seja bem vindo!");
+        }
+
+        apresentar();
+
+
+        // 2. Função com parâmetro
+        function saudar(nome) {
+            console.log("Olá, " + nome + "!");
+        }
+
+        saudar("Miguel A. Novaes De Sá");
+
+
+        // 3. Função com retorno
+        function calcularArea(base, altura) {
+            return base * altura;
+        }
+
+        let area = calcularArea(5, 10);
+        console.log("Área do retângulo:", area);
+
+
+        // 4. Desafio: Arrow Function
+        const dobro = (numero) => {
+            return numero * 2;
+        };
+
+        console.log("Dobro de 7:", dobro(7));
+
+    </script>
+
+</body>
+</html>
