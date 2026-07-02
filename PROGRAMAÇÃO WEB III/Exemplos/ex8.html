@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos JavaScript</title>
+</head>
+<body>
+
+    <h2>Parte 1 - onclick</h2>
+    <button onclick="mensagem()">clique aqui</button>
+
+    <hr>
+
+    <h2>Parte 2 - keyup</h2>
+    <input type="text" id="texto" placeholder="digite aqui" onkeyup="digitar()">
+
+    <hr>
+
+    <h2>Parte 3 - change</h2>
+    <select id="curso" onchange="escolherCurso()">
+        <option value="">selecione um curso</option>
+        <option>Informática</option>
+        <option>Agropecuária</option>
+        <option>Edificações</option>
+    </select>
+
+    <hr>
+
+    <h2>Desafio - submit</h2>
+
+    <form onsubmit="return validarFormulario()">
+        <label>nome:</label><br>
+        <input type="text" id="nome"><br><br>
+
+        <label>e-mail:</label><br>
+        <input type="email" id="email"><br><br>
+
+        <input type="submit" value="cadastrar">
+    </form>
+
+    <script>
+
+        // Parte 1
+        function mensagem() {
+            alert("Bem-vindo à Programação Web!");
+        }
+
+        // Parte 2
+        function digitar() {
+            let texto = document.getElementById("texto").value;
+            console.log(texto);
+        }
+
+        // Parte 3
+        function escolherCurso() {
+            let curso = document.getElementById("curso").value;
+
+            if (curso != "") {
+                alert("Curso escolhido: " + curso);
+            }
+        }
+
+        // Desafio
+        function validarFormulario() {
+
+            let nome = document.getElementById("nome").value;
+            let email = document.getElementById("email").value;
+
+            if (nome == "" || email == "") {
+                alert("Preencha os campos obrigatórios.");
+                return false;
+            }
+
+            alert("Cadastro realizado com sucesso!");
+            return true;
+        }
+
+    </script>
+
+</body>
+</html>
