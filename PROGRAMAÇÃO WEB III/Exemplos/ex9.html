@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Validação de Cadastro</title>
+</head>
+<body>
+
+    <h2>Cadastro</h2>
+
+    <form id="formCadastro">
+
+        <label>Nome:</label><br>
+        <input type="text" id="nome"><br><br>
+
+        <label>E-mail:</label><br>
+        <input type="email" id="email"><br><br>
+
+        <label>Senha:</label><br>
+        <input type="password" id="senha"><br><br>
+
+        <label>Confirmar Senha:</label><br>
+        <input type="password" id="confirmarSenha"><br><br>
+
+        <button type="submit">Cadastrar</button>
+
+    </form>
+
+    <p id="mensagem"></p>
+
+    <script>
+
+        const form = document.getElementById("formCadastro");
+
+        form.addEventListener("submit", function(event){
+
+            event.preventDefault();
+
+            let nome = document.getElementById("nome");
+            let email = document.getElementById("email");
+            let senha = document.getElementById("senha");
+            let confirmarSenha = document.getElementById("confirmarSenha");
+            let mensagem = document.getElementById("mensagem");
+
+            let valido = true;
+            mensagem.innerHTML = "";
+
+            // Limpa as bordas
+            nome.style.border = "";
+            email.style.border = "";
+            senha.style.border = "";
+            confirmarSenha.style.border = "";
+
+            // Nome obrigatório
+            if(nome.value.trim() == ""){
+                nome.style.border = "2px solid red";
+                mensagem.innerHTML = "Preencha o campo Nome.";
+                valido = false;
+            }else{
+                nome.style.border = "2px solid green";
+            }
+
+            // Email obrigatório
+            if(email.value.trim() == ""){
+                email.style.border = "2px solid red";
+                mensagem.innerHTML += "<br>Preencha o campo E-mail.";
+                valido = false;
+            }else{
+                email.style.border = "2px solid green";
+            }
+
+            // Senha com no mínimo 8 caracteres
+            if(senha.value.length < 8){
+                senha.style.border = "2px solid red";
+                mensagem.innerHTML += "<br>A senha deve ter pelo menos 8 caracteres.";
+                valido = false;
+            }else{
+                senha.style.border = "2px solid green";
+            }
+
+            // Confirmar senha
+            if(confirmarSenha.value != senha.value){
+                confirmarSenha.style.border = "2px solid red";
+                mensagem.innerHTML += "<br>As senhas não coincidem.";
+                valido = false;
+            }else if(confirmarSenha.value != ""){
+                confirmarSenha.style.border = "2px solid green";
+            }
+
+            // Cadastro realizado
+            if(valido){
+                mensagem.style.color = "green";
+                mensagem.innerHTML = "Cadastro realizado com sucesso!";
+            }else{
+                mensagem.style.color = "red";
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
