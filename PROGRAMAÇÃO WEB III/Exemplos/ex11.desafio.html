@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio - Escola</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 70%;
+        }
+
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Sistema: Escola</h2>
+
+    <p><strong>Tabela Principal:</strong> Alunos</p>
+
+    <table id="tabelaAlunos">
+        <thead>
+            <tr>
+                <th>Matrícula</th>
+                <th>Nome</th>
+                <th>Turma</th>
+                <th>Idade</th>
+                <th>Curso</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        const alunos = [
+            {
+                matricula: "202612260011",
+                nome: "João Silva",
+                turma: "1º A",
+                idade: 16,
+                curso: "Informática"
+            },
+            {
+                matricula: "202612260012",
+                nome: "Maria Oliveira",
+                turma: "2º B",
+                idade: 17,
+                curso: "Agropecuária"
+            }
+        ];
+
+        const tbody = document.querySelector("#tabelaAlunos tbody");
+
+        alunos.forEach(aluno => {
+            const linha = `
+                <tr>
+                    <td>${aluno.matricula}</td>
+                    <td>${aluno.nome}</td>
+                    <td>${aluno.turma}</td>
+                    <td>${aluno.idade}</td>
+                    <td>${aluno.curso}</td>
+                </tr>
+            `;
+            tbody.innerHTML += linha;
+        });
+    </script>
+
+</body>
+</html>
